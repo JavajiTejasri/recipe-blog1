@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Waves & Wonders - Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff9f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: #e66b2e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a.active {
+    color: #e66b2e;
+}
+
+nav a:hover {
+    color: #e66b2e;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 1rem;
+    background-color: #fff9f4;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.hero button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    background: #e66b2e;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(230,107,46,0.4);
+    transition: background 0.3s ease;
+}
+
+.hero button:hover {
+    background: #cc5c20;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: #e66b2e;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #e66b2e;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #e66b2e;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* About Section */
+.about-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+}
+
+.about-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 1rem;
+}
+
+.about-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #e66b2e;
+}
+
+.about-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.about-content a {
+    color: #e66b2e;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Instagram Grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.instagram-grid img,
+.instagram-grid iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: white;
+    border-top: 1px solid #f1f1f1;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer p {
+    color: #555;
+    font-size: 0.95rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <h1 class="logo">Waves & Wonders</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" style="background: linear-gradient(rgba(230,107,46,0.3), rgba(230,107,46,0.3)), url('https://via.placeholder.com/1200x500.png?text=Hero+Image') center/cover no-repeat;">
+    <h1>Waves & Wonders</h1>
+    <p>A travel blog for dreamy beaches, hidden villages and slow road trips.</p>
+    <button onclick="window.location.href='destinations.html'">Explore Destinations</button>
+</section>
+
+<div class="container">
+    <h2 class="section-title">Featured Stories</h2>
+    <div class="card-grid">
+        <div class="card">
+            <img src="images/bali/bali-beach-sunset.jpg" alt="Bali Beach Sunset" />
+            <div class="card-content">
+                <h3>48 Hours in Bali — A Beginner's Guide</h3>
+                <p>Sunrise temples, rice terraces and the best beach clubs — a short, sweet guide.</p>
+                <a href="blog-guide.html">Read post →</a>
+            </div>
+        </div>
+        <div class="card">
+          <img src="images/bali/coastal-road-trip.jpg.jpg" alt="Coastal Road Trip" />
+            <div class="card-content">
+                <h3>Coastal Road Trip: The Hidden Gems</h3>
+                <p>A slow drive with maps, snack stops, and picnic spots you'll love.</p>
+                <a href="coastal road trip.html">Read post →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/package.jpeg" alt="Minimalist Packing" />
+            <div class="card-content">
+                <h3>Discover the Art of Minimalist Packing</h3>
+                <p>Tips and tricks to travel light without missing out on essentials.</p>
+                <a href="minimalistic.html">Read post →</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="card-grid">
+        <div class="card">
+            <img src="images/bali2.jpeg" alt="Bali" />
+            <div class="card-content">
+                <h3>Bali, Indonesia</h3>
+                <p>Temples, rice terraces and beach sunsets.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/kyoto.jpeg" alt="tokyo" />
+            <div class="card-content">
+                <h3>tokyo, Japan</h3>
+                <p>Ancient temples, cherry blossoms, and serene gardens.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Travel Tips</h2>
+    <div class="card-grid">
+        <div class="card">
+            <div class="card-content">
+                <h3>Pack Light</h3>
+                <p>Carry only essentials and choose versatile outfits.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3>Plan Ahead</h3>
+                <p>Book accommodations early for the best rates.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3>Stay Hydrated</h3>
+                <p>Always carry a water bottle while exploring.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-card">
+        <img src="images/maya.jpg" alt="Author" />
+        <div class="about-content">
+            <h3>Hey — we're Friends</h3>
+            <p>We travel slowly, take too many photos, and share honest guides that help you plan better trips.</p>
+            <a href="read-story.html">Read our story →</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <strong>Waves & Wonders</strong>
+        <p>Travel more, live more </p>
+    </div>
+</footer>
+
+</body>
+</html>
